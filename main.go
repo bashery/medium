@@ -11,6 +11,7 @@ type Dog struct {
 }
 
 func main() {
+	fmt.Printn("medium project")
 
 	engine := html.New("templates", ".html")
 
