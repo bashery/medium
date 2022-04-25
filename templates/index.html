@@ -1,2 +1,14 @@
 <h1>{{.Name}}</h1>
-<h2>{{.Age}}</h2>
+<h1>{{.Email}}</h1>
+<h2>{{.Phon}}</h2>
+<h1>{{.Avatar}}</h1>
+
+{{ $name := .Name }}
+{{ if eq $name "admin" }}
+    oh may god!
+{{end}}
+
+{{ if eq .Name "admin" }}
+<h2>awesome you are {{.Name}} </h2>
+{{ end }}
+
