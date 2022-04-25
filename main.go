@@ -27,11 +27,11 @@ func main() {
 	defer db.Close()
 	e := echo.New()
 	e.Renderer = t
-	e.GET("/hello", humenFunc)
+	e.GET("/", personInfo)
 	fmt.Println(e.Start(":8080"))
 }
 
-func humenFunc(c echo.Context) (err error) {
+func personInfo(c echo.Context) (err error) {
 	user := getUserInfo(1)
 	fmt.Println(user)
 
